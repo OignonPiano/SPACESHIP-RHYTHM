@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://d38abqaw3j7ah"]
+
+[ext_resource type="Texture2D" uid="uid://cttya5akvryrm" path="res://New Piskel (2).png" id="1_axm28"]
+[ext_resource type="Script" path="res://Scripts/health_bar.gd" id="1_rxbk2"]
+[ext_resource type="Texture2D" uid="uid://dhwp8hswrgi1t" path="res://New Piskel (3).png" id="2_utl53"]
+[ext_resource type="Texture2D" uid="uid://dji3xicrcvni3" path="res://New Piskel.png" id="3_i171q"]
+
+[node name="Health_bar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rxbk2")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 7.0
+offset_right = 35.0
+offset_bottom = 12.0
+scale = Vector2(10, 10)
+value = 100.0
+texture_under = ExtResource("1_axm28")
+texture_over = ExtResource("2_utl53")
+texture_progress = ExtResource("3_i171q")

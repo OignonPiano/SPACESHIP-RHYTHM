@@ -1,23 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://b4g0xkx5jg0li"]
 
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cg1xr3i8e6nps" path="res://icon.png" id="2"]
+[ext_resource type="Script" path="res://Scripts/Area2DPlayer.gd" id="3_jcm07"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 140.625, 140.625 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(281.25, 281.25)
 
 [node name="Player" type="Node2D"]
-position = Vector2( 359, 296 )
-scale = Vector2( 0.4, 0.4 )
-script = ExtResource( 1 )
+position = Vector2(359, 296)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1")
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-texture = ExtResource( 2 )
+[node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2")
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2(0.4, 0.4)
+script = ExtResource("3_jcm07")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2( 0.4, 0.4 )
-shape = SubResource( 1 )
+scale = Vector2(0.4, 0.4)
+shape = SubResource("1")

@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyay8qgsoy6hf"]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource type="Texture2D" uid="uid://b4wgffipav6i3" path="res://sprites/Space shipsss.png" id="1"]
-[ext_resource type="Script" path="res://Scripts/EnemySprite.gd" id="2"]
+[ext_resource path="res://sprites/Space shipsss.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/EnemySprite.gd" type="Script" id=2]
 
 [node name="EnemySprite" type="Node2D"]
-script = ExtResource("2")
+script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 rotation = -1.5708
-texture = ExtResource("1")
+texture = ExtResource( 1 )

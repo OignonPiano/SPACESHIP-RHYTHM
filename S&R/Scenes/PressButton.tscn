@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://icon3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/PressButton.gd" type="Script" id=2]
+[ext_resource path="res://icon2.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="PressButton" type="AnimatedSprite"]
+modulate = Color( 0.470588, 0.470588, 0.470588, 1 )
+frames = SubResource( 4 )
+script = ExtResource( 2 )
+
+[node name="AREA" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AREA"]
+shape = SubResource( 1 )
+
+[node name="PushTimer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="AREA" to="." method="_on_AREA_area_entered"]
+[connection signal="area_exited" from="AREA" to="." method="_on_AREA_area_exited"]
+[connection signal="timeout" from="PushTimer" to="." method="_on_PushTimer_timeout"]

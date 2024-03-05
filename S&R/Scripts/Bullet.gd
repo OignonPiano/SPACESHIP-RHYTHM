@@ -1,14 +1,18 @@
 extends Node2D
 
-var dir = Vector2(1, 0)
+var type = "BULLET"
+var player = load("res://Scenes/Player.tscn")
 
-var hp = 100
+var b1 = player.instance()
+var dir = Vector2(1,1)
+var speed = 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.position += dir.rotated(self.rotation)
+	self.position += speed*dir.rotated(self.rotation)
+
+func destroy():
+	queue_free()

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/RHYTHM STUFF.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Note.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/PressButton.tscn" type="PackedScene" id=4]
+
+[node name="RhythmStuff" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="PressButton" parent="." instance=ExtResource( 4 )]
+position = Vector2( 60, 540 )
+
+[node name="Note" parent="." groups=["note"] instance=ExtResource( 2 )]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Note" to="PressButton" method="_on_Note_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

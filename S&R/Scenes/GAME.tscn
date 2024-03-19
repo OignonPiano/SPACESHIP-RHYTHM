@@ -1,15 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/BOSS_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/BACKGROUND.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/RhythmStuff.tscn" type="PackedScene" id=5]
 
 [node name="GAME" type="Node2D"]
 
 [node name="BACKGROUND" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+offset_right = 1024.0
+offset_bottom = 600.0
 color = Color( 0, 0, 0, 1 )
 script = ExtResource( 3 )
 
@@ -17,62 +16,59 @@ script = ExtResource( 3 )
 position = Vector2( -32, -60 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 12, 727 )
+target_position = Vector2( 12, 727 )
 collide_with_areas = true
 
 [node name="LEFT2" type="RayCast2D" parent="BACKGROUND"]
 position = Vector2( -57, -59 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 12, 727 )
+target_position = Vector2( 12, 727 )
 collide_with_areas = true
 
 [node name="RIGHT" type="RayCast2D" parent="BACKGROUND"]
 position = Vector2( 1051, -49 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 12, 727 )
+target_position = Vector2( 12, 727 )
 collide_with_areas = true
 
 [node name="RIGHT2" type="RayCast2D" parent="BACKGROUND"]
 position = Vector2( 1078, -50 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 12, 727 )
+target_position = Vector2( 12, 727 )
 collide_with_areas = true
 
 [node name="UP" type="RayCast2D" parent="BACKGROUND"]
 position = Vector2( -68, -20 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 1159, -4 )
+target_position = Vector2( 1159, -4 )
 collide_with_areas = true
 
 [node name="UP2" type="RayCast2D" parent="BACKGROUND"]
 position = Vector2( -71, -48 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 1159, -4 )
+target_position = Vector2( 1159, -4 )
 collide_with_areas = true
 
 [node name="DOWN" type="RayCast2D" parent="BACKGROUND"]
 position = Vector2( -54, 625 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 1159, -4 )
+target_position = Vector2( 1159, -4 )
 collide_with_areas = true
 
 [node name="DOWN2" type="RayCast2D" parent="BACKGROUND"]
 position = Vector2( -55, 656 )
 enabled = true
 exclude_parent = false
-cast_to = Vector2( 1159, -4 )
+target_position = Vector2( 1159, -4 )
 collide_with_areas = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 534, 379 )
-
-[node name="BOSS_1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 502, 38 )
 
 [node name="RhythmStuff" parent="." instance=ExtResource( 5 )]

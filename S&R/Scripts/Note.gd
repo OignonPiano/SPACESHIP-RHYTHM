@@ -22,10 +22,10 @@ func _physics_process(delta):
 			$Node2D.position.x -= speed * delta
 
 func initialize():
-	speed = DIST_TO_TARGET / 2.0
+	speed = DIST_TO_TARGET / 1.5
 
 func destroy(score):
-	$AnimatedSprite.visible = false
+	$AnimatedSprite2D.visible = false
 	$Timer.start()
 	hit = true
 	queue_free()

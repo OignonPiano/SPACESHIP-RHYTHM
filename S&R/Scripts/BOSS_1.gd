@@ -13,25 +13,25 @@ func _process(delta):
 	pass
 
 func pattern1():
-	var b1 = bullet_scene.instance()
+	var b1 = bullet_scene.instantiate()
 	b1.position = self.position
 	b1.rotation = self.rotation
 	b1.dir = Vector2(1, 0)
 	b1.speed = 6
 	
-	var b2 = bullet_scene.instance()
+	var b2 = bullet_scene.instantiate()
 	b2.position = self.position
 	b2.rotation = self.rotation
 	b2.dir = Vector2(0, 1)
 	b2.speed = 6
 	
-	var b3 = bullet_scene.instance()
+	var b3 = bullet_scene.instantiate()
 	b3.position = self.position
 	b3.rotation = self.rotation
 	b3.dir = Vector2(-1, 0)
 	b3.speed = 6
 	
-	var b4 = bullet_scene.instance()
+	var b4 = bullet_scene.instantiate()
 	b4.position = self.position
 	b4.rotation = self.rotation
 	b4.dir = Vector2(0, -1)
@@ -44,7 +44,7 @@ func pattern1():
 
 func pattern2_1():
 	for i in range(12,1,-1):
-		var b = bullet_scene.instance()
+		var b = bullet_scene.instantiate()
 		b.position = self.position
 		b.rotation = self.rotation
 		b.dir = Vector2(1, 0)
@@ -52,25 +52,25 @@ func pattern2_1():
 		get_parent().add_child(b)
 
 func pattern2_2():
-	var b1 = bullet_scene.instance()
+	var b1 = bullet_scene.instantiate()
 	b1.position = self.position
 	b1.rotation = self.rotation
 	b1.dir = Vector2(1, 0)
 	b1.speed = 4
 	
-	var b2 = bullet_scene.instance()
+	var b2 = bullet_scene.instantiate()
 	b2.position = self.position
 	b2.rotation = self.rotation
 	b2.dir = Vector2(0, 1)
 	b2.speed = 4
 	
-	var b3 = bullet_scene.instance()
+	var b3 = bullet_scene.instantiate()
 	b3.position = self.position
 	b3.rotation = self.rotation
 	b3.dir = Vector2(-1, 0)
 	b3.speed = 4
 	
-	var b4 = bullet_scene.instance()
+	var b4 = bullet_scene.instantiate()
 	b4.position = self.position
 	b4.rotation = self.rotation
 	b4.dir = Vector2(0, -1)
@@ -83,7 +83,7 @@ func pattern2_2():
 
 func pattern3():
 	for i in range(12,1,-1):
-		var b1 = bullet_scene.instance()
+		var b1 = bullet_scene.instantiate()
 		b1.position = self.position
 		b1.rotation = self.rotation
 		b1.dir = Vector2(1, 0)
@@ -91,7 +91,7 @@ func pattern3():
 		get_parent().add_child(b1)
 	
 	for i in range(12,1,-1):
-		var b2 = bullet_scene.instance()
+		var b2 = bullet_scene.instantiate()
 		b2.position = self.position
 		b2.rotation = self.rotation
 		b2.dir = Vector2(-1, 0)

@@ -3,7 +3,7 @@ extends Node2D
 var damage
 var hp = 100
 
-onready var pb = $Control/ProgressBar
+@onready var pb = $Control/ProgressBar
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

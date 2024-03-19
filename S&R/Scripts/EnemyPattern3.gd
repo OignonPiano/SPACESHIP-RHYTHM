@@ -14,7 +14,7 @@ func _process(delta):
 func pattern():
 	
 	if t<=time:
-		var b1 = bullet_scene.instance()
+		var b1 = bullet_scene.instantiate()
 		b1.position = self.position
 		b1.rotation = self.rotation
 		b1.speed = 6

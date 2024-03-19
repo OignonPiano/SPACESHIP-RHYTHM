@@ -16,25 +16,25 @@ func _process(delta):
 func pattern():
 	
 	if t<=time:
-		var b1 = bullet_scene.instance()
+		var b1 = bullet_scene.instantiate()
 		b1.position = self.position
 		b1.rotation = self.rotation
 		b1.speed = 2
 		b1.dir = Vector2(1, 1)
 		
-		var b2 = bullet_scene.instance()
+		var b2 = bullet_scene.instantiate()
 		b2.position = self.position
 		b2.rotation = self.rotation
 		b2.speed = 2
 		b2.dir = Vector2(-1, -1)
 		
-		var b3 = bullet_scene.instance()
+		var b3 = bullet_scene.instantiate()
 		b3.position = self.position
 		b3.rotation = self.rotation
 		b3.speed = 2
 		b3.dir = Vector2(-1, 1)
 		
-		var b4 = bullet_scene.instance()
+		var b4 = bullet_scene.instantiate()
 		b4.position = self.position
 		b4.rotation = self.rotation
 		b4.speed = 2

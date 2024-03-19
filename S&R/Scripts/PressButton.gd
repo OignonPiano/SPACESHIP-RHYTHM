@@ -1,11 +1,11 @@
-extends AnimatedSprite
+extends AnimatedSprite2D
 
 var entered = false
 var current_note = null
 
 var type = "button_to_press"
 
-export var input = "ui_select"
+@export var input = "ui_select"
 
 func _unhandled_input(event):
 	if event.is_action(input):

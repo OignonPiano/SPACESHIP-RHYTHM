@@ -3,7 +3,7 @@ extends Node2D
 var pattern1_scene = load("res://Scenes/EnemyPattern1.tscn")
 var pattern2_scene = load("res://Scenes/EnemyPattern2.tscn")
 var p = 1
-onready var timer = $Timer
+@onready var timer = $Timer
 
 func _ready():
 	pattern(2)
@@ -12,10 +12,10 @@ func _ready():
 
 func pattern(n):
 	if n == 1:
-		var pattern = pattern1_scene.instance()
+		var pattern = pattern1_scene.instantiate()
 		add_child(pattern)
 	elif n == 2 :
-		var pattern = pattern2_scene.instance()
+		var pattern = pattern2_scene.instantiate()
 		add_child(pattern)
 
 

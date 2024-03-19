@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/Space shipsss.png" type="Texture2D" id=1]
+[ext_resource path="res://Scripts/EnemySprite.gd" type="Script" id=2]
+
+[node name="EnemySprite" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource( 1 )

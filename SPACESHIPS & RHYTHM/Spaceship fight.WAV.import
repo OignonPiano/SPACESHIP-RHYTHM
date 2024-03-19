@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlh4tlos46rrg"
+path="res://.godot/imported/Spaceship fight.WAV-bf0b2af458b656b41e9c886a5b4fe39e.sample"
+
+[deps]
+
+source_file="res://Spaceship fight.WAV"
+dest_files=["res://.godot/imported/Spaceship fight.WAV-bf0b2af458b656b41e9c886a5b4fe39e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

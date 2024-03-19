@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx664njo3ldst"]
+
+[ext_resource type="PackedScene" uid="uid://7t0rrbhjvvba" path="res://Scenes/Player.tscn" id="1"]
+[ext_resource type="Script" path="res://Scripts/BACKGROUND.gd" id="3"]
+[ext_resource type="PackedScene" path="res://Scenes/BOSS_1.tscn" id="4_geqtp"]
+[ext_resource type="PackedScene" path="res://Scenes/RhythmStuff.tscn" id="5"]
+
+[node name="GAME" type="Node2D"]
+
+[node name="BACKGROUND" type="ColorRect" parent="."]
+offset_right = 1024.0
+offset_bottom = 600.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("3")
+
+[node name="LEFT" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(-32, -60)
+exclude_parent = false
+target_position = Vector2(12, 727)
+collide_with_areas = true
+
+[node name="LEFT2" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(-57, -59)
+exclude_parent = false
+target_position = Vector2(12, 727)
+collide_with_areas = true
+
+[node name="RIGHT" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(1051, -49)
+exclude_parent = false
+target_position = Vector2(12, 727)
+collide_with_areas = true
+
+[node name="RIGHT2" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(1078, -50)
+exclude_parent = false
+target_position = Vector2(12, 727)
+collide_with_areas = true
+
+[node name="UP" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(-68, -20)
+exclude_parent = false
+target_position = Vector2(1159, -4)
+collide_with_areas = true
+
+[node name="UP2" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(-71, -48)
+exclude_parent = false
+target_position = Vector2(1159, -4)
+collide_with_areas = true
+
+[node name="DOWN" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(-54, 625)
+exclude_parent = false
+target_position = Vector2(1159, -4)
+collide_with_areas = true
+
+[node name="DOWN2" type="RayCast2D" parent="BACKGROUND"]
+position = Vector2(-55, 656)
+exclude_parent = false
+target_position = Vector2(1159, -4)
+collide_with_areas = true
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(534, 379)
+
+[node name="RhythmStuff" parent="." instance=ExtResource("5")]
+
+[node name="BOSS_1" parent="." instance=ExtResource("4_geqtp")]

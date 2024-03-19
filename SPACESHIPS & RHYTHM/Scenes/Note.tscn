@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Note.gd" type="Script" id=1]
+[ext_resource path="res://icon3.png" type="Texture2D" id=2]
+[ext_resource path="res://icon2.png" type="Texture2D" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+size = Vector2( 32, 32 )
+
+[node name="Note" type="Area2D"]
+position = Vector2( 932, 508 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2( 32, 32 )
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 32, 32 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Node2D"]
+offset_left = -903.0
+offset_top = -33.0
+offset_right = -761.0
+offset_bottom = -8.0
+
+[node name="Combo" type="Label" parent="Node2D"]
+offset_left = -865.0
+offset_top = -63.0
+offset_right = -799.0
+offset_bottom = -49.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
